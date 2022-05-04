@@ -1,5 +1,6 @@
 import traceback
-from utils import send_message
+
+from .utils import send_message
 
 
 def report_bug(func):

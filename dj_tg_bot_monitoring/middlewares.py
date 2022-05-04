@@ -1,6 +1,7 @@
 import traceback
 from django.http import HttpRequest
-from utils import send_message
+
+from .utils import send_message
 
 
 class TelegramExceptionsMiddleware:

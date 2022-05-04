@@ -1,6 +1,7 @@
 from typing import List, Any, AnyStr
 from django.apps import AppConfig
 from django.core.checks import Error
+
 from .conf import configuration
 
 
