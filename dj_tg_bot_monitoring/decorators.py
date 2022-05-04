@@ -10,9 +10,9 @@ def report_bug(name_task="Task name"):
                 func(*args, **kwargs)
             except Exception as e:
                 send_message(
-                    f"Task: *{name_task}*"
+                    f"*Task name*: {name_task}"
                     f"\n\n"
-                    f"{str(traceback.format_exc())}",
+                    f"```\n{str(traceback.format_exc())}\n```",
                     parse_mode="MARKDOWN")
         return main
     return wrapper
