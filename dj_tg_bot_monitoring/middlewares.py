@@ -1,10 +1,6 @@
 import traceback
-import requests
 from django.http import HttpRequest
-
-from .conf import configuration
-
-TELEGRAM_METHOD = f"https://api.telegram.org/bot{configuration.TELEGRAM_BOT.get('TOKEN')}/sendMessage"
+from utils import send_message
 
 
 class TelegramExceptionsMiddleware:
@@ -16,11 +12,4 @@ class TelegramExceptionsMiddleware:
 
     async def process_exception(self, request: HttpRequest, exception: Exception):
         """ Логирование Exception """
-        data = {
-            "text": str(traceback.format_exc()),
-            "chat_id": ""
-        }
-        chats = configuration.TELEGRAM_BOT.get('CHATS', set())
-        for chat_id in chats:
-            data['chat_id'] = chat_id
-            requests.post(TELEGRAM_METHOD, json=data)
+        send_message(str(traceback.format_exc()))
