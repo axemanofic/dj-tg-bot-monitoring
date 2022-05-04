@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dj-tg-bot-monitoring"
-version = "0.2.1"
+version = "0.2.2"
 description = "Exception monitoring in django using telegram bot"
 authors = ["Roman Sotnikov <romasotnikov12345@gmail.com>"]
 license = "MIT"

@@ -9,4 +9,4 @@ def report_bug(func):
             func()
         except Exception as e:
             send_message(str(traceback.format_exc()))
-        return wrapper
+    return wrapper
