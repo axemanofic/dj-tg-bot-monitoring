@@ -1,6 +1,5 @@
 import traceback
-
-import aiohttp
+import requests
 from django.http import HttpRequest
 
 from .conf import configuration
@@ -19,12 +18,9 @@ class TelegramExceptionsMiddleware:
         """ Логирование Exception """
         data = {
             "text": str(traceback.format_exc()),
-            "chat_id": "1"
+            "chat_id": ""
         }
-        async with aiohttp.ClientSession() as session:
-            chats = configuration.TELEGRAM_BOT.get('CHATS', set())
-            for chat_id in chats:
-                data['chat_id'] = chat_id
-                async with session.post(TELEGRAM_METHOD, json=data) as res:
-                    data = await res.json()
-                    print(data)
+        chats = configuration.TELEGRAM_BOT.get('CHATS', set())
+        for chat_id in chats:
+            data['chat_id'] = chat_id
+            requests.post(TELEGRAM_METHOD, json=data)
