@@ -13,6 +13,7 @@ def report_bug(name_task="Task name"):
                     f"*Task name*: {name_task}"
                     f"\n\n"
                     f"```\n{str(traceback.format_exc())}\n```",
-                    parse_mode="MARKDOWN")
+                    parse_mode="MARKDOWN"
+                )
         return main
     return wrapper
