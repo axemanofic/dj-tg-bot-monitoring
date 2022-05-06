@@ -5,7 +5,7 @@ from .consts import TELEGRAM_METHOD
 
 def send_message(message: str, parse_mode="MARKDOWN"):
     data = {
-        "text": f"```{message}```",
+        "text": f"```\n{message}\n```",
         "chat_id": "",
         "parse_mode": parse_mode
     }
