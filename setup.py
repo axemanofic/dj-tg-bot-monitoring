@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='dj-tg-bot-monitoring',
-    version='0.2.7',
+    version='0.2.8',
     packages=[''],
     package_dir={'': 'dj_tg_bot_monitoring'},
     url='https://github.com/axemanofic/dj-tg-bot-monitoring/tree/master',
