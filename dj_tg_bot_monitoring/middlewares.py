@@ -12,5 +12,5 @@ class TelegramExceptionsMiddleware:
         return self.get_response(request)
 
     async def process_exception(self, request: HttpRequest, exception: Exception):
-        """ Логирование Exception """
+        """Logging Exceptions"""
         send_message(str(traceback.format_exc()))
