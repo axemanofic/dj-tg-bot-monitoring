@@ -1,18 +1,18 @@
 [tool.poetry]
 name = "dj-tg-bot-monitoring"
-version = "0.2.8"
+version = "0.2.10"
 description = "Exception monitoring in django using telegram bot"
 authors = ["Roman Sotnikov <romasotnikov12345@gmail.com>"]
 license = "MIT"
 homepage = "https://github.com/axemanofic/dj-tg-bot-monitoring"
 repository = "https://github.com/axemanofic/dj-tg-bot-monitoring"
-keywords = ["django", "drf", "monitoring"]
+keywords = ["django", "django-app", "drf", "monitoring"]
 include = ["LICENSE",]
 
 
 [tool.poetry.dependencies]
 python = "^3.9"
-Django = "^3.2"
+Django = "^4.0.0"
 requests = "^2.27.1"
 
 [tool.poetry.dev-dependencies]
